@@ -1,0 +1,15 @@
+{
+    "version": 3,
+    "mappings": "ACYA;;;;EAIE;ACWF,6BAA6B;AAO7B,2BAA2B;AAyC3B,iCAAiC;AAKjC,+BAA+B;AAoB/B,yBAAyB;AAQzB,uBAAuB;AAGvB,gBAAgB;AAWhB,cAAc;AFpHd,AAAA,SAAS,CAAC;EAER,UAAU,EAAE,2BAA2B;CACxC;;AAED,AAAA,YAAY,CAAC;EACX,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,CAAC;CAaX;;AAfD,AAIE,YAJU,AAIT,OAAO,CAAC;EACP,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,EAAE;EACX,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;EACX,IAAI,EAAE,CAAC;EACP,GAAG,EAAE,CAAC;EACN,UAAU,EEoFD,0CAA0C;EFnFnD,OAAO,EAAE,EAAE;EACX,OAAO,EAAE,EACX;CAAC",
+    "sources": [
+        "background.scss",
+        "fonts.scss",
+        "colors.scss",
+        "inheritance.scss",
+        "mixin.scss",
+        "mixin.scss",
+        "responsive.scss"
+    ],
+    "names": [],
+    "file": "background.css"
+}

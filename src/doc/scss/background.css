@@ -1,0 +1,35 @@
+/*
+=====================
+font weight
+
+*/
+/*DARK VERSION COLORS START*/
+/*DARK VERSION COLORS END*/
+/*DARK VERSION BACKGROUND START*/
+/*DARK VERSION BACKGROUND END*/
+/*GRADIENT COLORS START*/
+/*GRADINET COLORS END*/
+/*SHADOW START*/
+/*SHADOW END*/
+.inner_bg {
+  background: url(../img/bg/inner_bg.jpg);
+}
+
+.wlc_overlay {
+  position: relative;
+  z-index: 2;
+}
+
+.wlc_overlay:before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: -webkit-gradient(linear, left bottom, left top, from(#000), to(transparent));
+  background: linear-gradient(to top, #000, transparent);
+  z-index: -1;
+  opacity: .6;
+}
+/*# sourceMappingURL=background.css.map */

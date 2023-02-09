@@ -1,0 +1,129 @@
+.sidebarMenu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  height: 100vh;
+  width: 300px;
+  overflow-y: auto;
+  background: #ffffff;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.sidebarMenu.hideSideMenu {
+  right: -105%;
+}
+
+.sidebarMenu .clox {
+  color: #777;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 75px;
+  margin-right: 10px;
+  margin-left: auto;
+  display: block;
+  padding: 11px;
+  text-align: right;
+}
+
+.sidebarMenu .navBar {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebarMenu .navBar li {
+  display: block;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.sidebarMenu .navBar li:last-child {
+  border: 0;
+}
+
+.sidebarMenu .navBar li p, .sidebarMenu .navBar li a {
+  padding: 10px 20px;
+  display: block;
+  color: #4F585E;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.sidebarMenu .navBar li p.active, .sidebarMenu .navBar li p:hover, .sidebarMenu .navBar li a.active, .sidebarMenu .navBar li a:hover {
+  background: #fff4f4;
+  color: #1091FF;
+}
+
+.sidebarMenu .navBar li p i, .sidebarMenu .navBar li a i {
+  float: right;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.sidebarMenu .navBar li p i.active, .sidebarMenu .navBar li a i.active {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.sidebarMenu .navBar li .subMenu {
+  padding-left: 15px;
+  background: transparent;
+}
+
+.sidebarMenu.themeBlue {
+  background: #1091FF;
+}
+
+.sidebarMenu.themeBlue .clox {
+  color: #ffffff;
+}
+
+.sidebarMenu.themeBlue .navBar {
+  color: #ffffff;
+}
+
+.sidebarMenu.themeBlue .navBar li {
+  border-color: #68afeb;
+}
+
+.sidebarMenu.themeBlue .navBar li p, .sidebarMenu.themeBlue .navBar li a {
+  color: #ffffff;
+}
+
+.sidebarMenu.themeBlue .navBar li p.active, .sidebarMenu.themeBlue .navBar li p:hover, .sidebarMenu.themeBlue .navBar li a.active, .sidebarMenu.themeBlue .navBar li a:hover {
+  background: #ffffff;
+  color: #1091FF;
+}
+
+.sidebarMenu.themeDark {
+  background: #29333C;
+}
+
+.sidebarMenu.themeDark .clox {
+  color: #ffffff;
+}
+
+.sidebarMenu.themeDark .navBar {
+  color: #ffffff;
+}
+
+.sidebarMenu.themeDark .navBar li {
+  border-color: #29333C;
+}
+
+.sidebarMenu.themeDark .navBar li p, .sidebarMenu.themeDark .navBar li a {
+  color: #ffffff;
+}
+
+.sidebarMenu.themeDark .navBar li p.active, .sidebarMenu.themeDark .navBar li p:hover, .sidebarMenu.themeDark .navBar li a.active, .sidebarMenu.themeDark .navBar li a:hover {
+  background: #ffffff;
+  color: #1091FF;
+}
+/*# sourceMappingURL=style.css.map */
