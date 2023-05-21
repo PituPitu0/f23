@@ -17,7 +17,7 @@
     "react-modal-video": "^1.2.3",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^5.0.1",
+    "react-scripts": "^4.0.3",
     "react-slick": "^0.26.1",
     "react-toastify": "^6.0.5",
     "reactstrap": "^8.4.1",
@@ -25,6 +25,7 @@
     "redux-thunk": "^2.3.0",
     "simple-react-validator": "^1.4.6",
     "slick-carousel": "^1.8.1",
+    "strapi-sdk-js": "^2.2.0",
     "swiper": "^9.0.3"
   },
   "scripts": {
