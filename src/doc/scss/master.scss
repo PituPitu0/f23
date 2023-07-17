@@ -44,6 +44,7 @@
 @import 'preloader';
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;300;400;500;700;800;900&display=swap');
 
+
 a {
   @include transition(all .4s);
   color: $secondary_color;
@@ -1674,9 +1675,11 @@ span.tranding {
 */
 
 .footer {
+
+
   .cta {
     padding: 70px 0 40px;
-
+    
     .social2 {
       margin-top: 35px;
 
@@ -1969,8 +1972,10 @@ textarea {
 
 
 .primay_bg {
-  background: $primary_bg;
-}
+  background: url(../img/bg/bannerf23.jpg);   //$primary_bg;(change to asphalt
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}    
 
 
 .border_white {

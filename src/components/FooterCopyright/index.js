@@ -10,7 +10,7 @@ const quick_links = [
  
     {
         name: 'Kontakt',
-        link: '/'
+        link: 'contact/'
     },
 ];
 
