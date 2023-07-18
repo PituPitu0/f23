@@ -1,13 +1,12 @@
 import React, {Fragment, useState} from 'react';
 import BreadCrumb from "../../components/BreadCrumb";
 import {Link} from "react-router-dom";
-import {Nav, NavItem, TabContent, TabPane} from "reactstrap";
+import {Nav} from "reactstrap";
 
 import BannerSection from "../../components/BannerSection";
-import classnames from 'classnames';
 
-// images
-import banner2 from "../../doc/img/bg/sidebar-1.png";
+
+//
 
 import author1 from '../../doc/img/author/author1.png';
 
@@ -16,9 +15,10 @@ import author1 from '../../doc/img/author/author1.png';
 const AboutUsPage = () => {
     const [activeTab, setActiveTab] = useState('1');
 
-    const toggle = tab => {
+    // eslint-disable-next-line no-unused-vars
+    function toggle(tab) {
         if (activeTab !== tab) setActiveTab(tab);
-    };
+    }
     return (
         <Fragment>
             <BreadCrumb className="shadow5" title="">
