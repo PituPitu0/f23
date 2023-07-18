@@ -5,9 +5,9 @@ import Swiper from 'react-id-swiper';
 import fnewsImg2 from '../../doc/img/feature/feature2.jpg';
 import fnewsImg3 from '../../doc/img/feature/feature3.jpg';
 // eslint-disable-next-line no-unused-vars
-import fnewsImg4 from '../../doc/img/feature/feature4.jpg';
+
 import {Link} from "react-router-dom";
-import FontAwesome from "../uiStyle/FontAwesome";
+
 
 const news = [
     {
@@ -26,19 +26,9 @@ const news = [
 ];
 
 const FeatureNews = ({className}) => {
-    const [swiper, setSwiper] = useState(null);
+    const [setSwiper] = useState(null);
 
-    const goNext = () => {
-        if (swiper !== null) {
-            swiper.slideNext();
-        }
-    };
 
-    const goPrev = () => {
-        if (swiper !== null) {
-            swiper.slidePrev();
-        }
-    };
     const params = {
         slidesPerView: 4,
         spaceBetween: 30,
@@ -91,10 +81,7 @@ const FeatureNews = ({className}) => {
                                     </div>
                                 ))}
                             </Swiper>
-                            <div className="navBtns">
-                                <div onClick={goPrev} className="navBtn prevtBtn"><FontAwesome name="angle-left"/></div>
-                                <div onClick={goNext} className="navBtn nextBtn"><FontAwesome name="angle-right"/></div>
-                            </div>
+                            
                         </div>
                         {/*CAROUSEL END*/}
                     </div>

@@ -62,7 +62,7 @@ const HomePage = () => {
                 </div>
             </div>
          {/* <MixCarousel className="half_bg1"/>*/} 
-            <VideoPost className="pt30 half_bg60"/>
+            
             <div className="entertrainments">
                 <div className="container">
                     <div className="row">

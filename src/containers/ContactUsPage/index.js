@@ -14,7 +14,7 @@ class ContactUsPage extends Component {
                                 <div className="col-lg-6">
                                     <div className="title_inner">
                                         <h6>Kontakt</h6>
-                                        <h1>Napisz do nas na </h1>
+                                        <h1>Napisz do nas</h1>
                                         <h4><a href='Frysztak23pl@gmail.com'>Frysztak23pl@gmail.com</a></h4>
                                     </div>
                                 </div>

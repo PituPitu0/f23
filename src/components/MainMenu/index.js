@@ -20,29 +20,10 @@ const menus = [
             
         ]
     },
-    {
-        id: 2,
-        linkText: 'Strona',
-        child: true,
-        icon: 'angle-down',
-        submenu: [
-            {
-                id: 21,
-                link: '/about',
-                linkText: 'O nas'
-            },
     
-            {
-                id: 23,
-                link: '/contact',
-                linkText: 'Kontakt'
-            },
-           
-        ]
-    },
   
     {
-        id: 4,
+        id: 2,
         linkText: 'Wiadomości',
         child: true,
         icon: 'angle-down',
@@ -56,11 +37,16 @@ const menus = [
     
         ]
     },
-   
+    {
+        id: 3,
+        linkText: 'O nas',
+        link: '/about'
+    },
+
    
    
     {
-        id: 7,
+        id: 4,
         linkText: 'Kontakt',
         link: '/contact'
     },
@@ -85,7 +71,7 @@ const menusDark = [
 
 const MainMenu = ({className, dark}) => {
     const [searchShow, setSearchShow] = useState(false);
-    const [sideShow, setSideShow] = useState(false);
+    const [setSideShow] = useState(false);
 
     const arr = dark ? menusDark : menus;
     return (
