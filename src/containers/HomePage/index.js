@@ -3,7 +3,7 @@ import React, {Fragment} from 'react';
 
 import FeatureNews from "../../components/FeatureNews";
 
-import VideoPost from "../../components/VideoPost";
+
 
 
 import LocalNews from "../../components/LocalNews";

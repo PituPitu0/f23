@@ -2,10 +2,6 @@ import React, {Fragment} from 'react';
 import PostOnePagination from "../../components/PostOnePagination";
 import PostOnePageStrapi  from "../../components/PostOnePageStrapi";
 
-
-
-
-
 import axios from "axios";
 
 axios.get("http://localhost:1337/api/newss").then((response) => {

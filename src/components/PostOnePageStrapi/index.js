@@ -11,6 +11,7 @@ function PostOnePageStrapi() {
   const fetchArticles = async () => {
     try {
       const response = await axios.get('http://localhost:1337/api/newss?populate=*');
+      console.log('Odpowiedź z serwera:', response.data);
       setArticles(response.data.data);
     } catch (error) {
       console.log('Wystąpił błąd:', error);
@@ -33,7 +34,7 @@ function PostOnePageStrapi() {
 
       <div className="border-radious5 mb30 shadow7 padding20">
         {articles.map((article) => (
-          <img src={`http://localhost:1337${article.attributes.image.data.attributes.url}`} alt="krowa" />
+          <img key={article.id} src={`http://localhost:1337${article.attributes.image.data.attributes.url}`} alt="krowa" />
         ))}
       </div>
     </div>
