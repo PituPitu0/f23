@@ -6944,7 +6944,7 @@ a.cbtn3:hover {
 
 .dark-theme h2.post-title.title-small, .dark-theme h2.post-title.title-small a {
   font-size: 16px;
-  color: #17222B;
+  color: #1974be;
   margin-top: 10px;
   font-weight: 500;
 }
@@ -6969,7 +6969,9 @@ a.cbtn3:hover {
   background: #fff;
   border-radius: 50%;
 }
-
+.contact_details{
+  color: #0d37f0;
+}
 .dark-theme .menu_right {
   display: -webkit-box;
   display: -ms-flexbox;

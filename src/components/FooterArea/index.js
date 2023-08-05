@@ -19,8 +19,7 @@ const FooterArea = ({className}) => {
                           
                         </div>
                         <div className="col-md-6 col-lg-4 offset-lg-2 align-self-center">
-                      
-                        </div>
+                       </div>
                     </div>
              
            

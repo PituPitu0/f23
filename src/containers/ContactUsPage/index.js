@@ -12,10 +12,10 @@ class ContactUsPage extends Component {
                         <div className="inner_wrap">
                             <div className="row">
                                 <div className="col-lg-6">
-                                    <div className="title_inner">
+                                    <div className="white h2">
                                         <h6>Kontakt</h6>
                                         <h1>Napisz do nas</h1>
-                                        <h4><a href='Frysztak23pl@gmail.com'>Frysztak23pl@gmail.com</a></h4>
+                                        <h2>Frysztak23pl@gmail.com</h2>
                                     </div>
                                 </div>
                             </div>

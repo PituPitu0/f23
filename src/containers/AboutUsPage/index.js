@@ -1,6 +1,6 @@
 import React, {Fragment, useState} from 'react';
 import BreadCrumb from "../../components/BreadCrumb";
-import {Link} from "react-router-dom";
+//import {Link} from "react-router-dom";
 import {Nav} from "reactstrap";
 
 import BannerSection from "../../components/BannerSection";
@@ -8,7 +8,7 @@ import BannerSection from "../../components/BannerSection";
 
 //
 
-import author1 from '../../doc/img/author/author1.png';
+import aboutus from '../../doc/img/aboutus/aboutus.jpg'
 
 
 
@@ -21,42 +21,36 @@ const AboutUsPage = () => {
     }
     return (
         <Fragment>
-            <BreadCrumb className="shadow5" title="">
+            <BreadCrumb className="shadow5" title="O nas">
                 <Fragment>
                     <div className="space-50"/>
                     <div className="row">
                         <div className="col-12">
-                            <div className="author_about">
-                                <div className="author_img">
-                                    <div className="author_wrap">
-                                        <img src={author1} alt="author1"/>
+                            <div>
+                                <div>
+                                    <div className="align-self-center " >
+                                        <img src={aboutus} alt="aboutus"/>
                                     </div>
                                 </div>
-                                <div className="author_content"><Link to="/">Równo z Górki</Link>
-                                    <ul className="inline">
-                                        <li>Ojciec Redaktor</li>
-                                        <li>Since: Styczń 1, 2023</li>
-                                    </ul>
-                                </div>
-                                <p>Historia</p>
+                               
+                                <h1>Historia</h1>
                                 <br/>
-                                <p>Frysztak (niem. Freistadt) – wieś (dawne miasto) w Polsce położona w województwie podkarpackim, w powiecie strzyżowskim, w gminie Frysztak[3].
+                                <p>
+                                Frysztak to niewielkie wieś położona w południowo-wschodniej Polsce, w województwie podkarpackim. Leży nad rzeką Wisłok, około 15 km na południowy zachód od Rzeszowa, co sprawia, że jest atrakcyjnym miejscem do życia i rozwoju gospodarczego.
 
-Leży na wzgórzu nad doliną Wisłoka.
+                                Historia Frysztaka sięga średniowiecza, gdy w XIII wieku istniała tu osada o nazwie Frisztak, która później stała się miastem. W 1354 roku miejscowość otrzymała prawa miejskie na mocy przywileju wydanego przez króla Kazimierza Wielkiego. W kolejnych wiekach miasto rozwijało się, pełniąc funkcję lokalnego ośrodka administracyjnego, handlowego i rzemieślniczego. 
+                                W XIX wieku Frysztak znalazł się pod zaborem austriackim, a po odzyskaniu niepodległości przez Polskę w 1918 roku, stał się częścią II Rzeczypospolitej. Jednakże, w 1934 roku, w wyniku pewnych przemian administracyjnych, Frysztak został zdegradowany z statusu miasta, utracił prawa miejskie i od tamtego czasu funkcjonuje jako wieś. Podczas II wojny światowej już jako wieś ucierpiał, ale po zakończeniu wojny szybko się odbudował.
 
-Frysztak uzyskał lokację miejską w 1366 r.[4], zdegradowany w 1934 r. wraz z innymi mniejszymi miastami[5].
 
-W latach 1954–1972 wieś należała i była siedzibą władz gromady Frysztak. W latach 1975–1998 miejscowość administracyjnie należała do województwa rzeszowskiego.
+                                Frysztak odznacza się malowniczym otoczeniem, w tym bliskość Pogórza Karpackiego i gór Słonnej. Dzięki temu jest również popularnym celem turystycznym, przyciągającym miłośników przyrody i aktywnego wypoczynku. W okolicy znajdują się szlaki turystyczne oraz atrakcyjne tereny do uprawiania sportów na świeżym powietrzu.
 
-Miejscowość jest siedzibą gminy Frysztak oraz parafii Narodzenia NMP, należącej do dekanatu Frysztak, diecezji rzeszowskiej.
+                                Wieś ma również swoje tradycje kulturowe i religijne. Znajduje się tu zabytkowy kościół parafialny pw. Wniebowzięcia NMP, który pochodzi z XVII wieku i jest przykładem architektury barokowej. Warto także zwrócić uwagę na inne zabytki, takie jak pomniki i kapliczki, które przypominają o historii i kulturze tego miejsca.
 
-Prawa miejskie uzyskał w 1366 roku[4] (to wtedy Kazimierz III Wielki zezwolił na powstanie nad rzeką niezależnego miasta królewskiego pn. "Wisłok"[7]). Nazwa Frysztak (niem. "wolne miasto") świadczy o osadzeniu kolonistów niemieckich, którzy ulegli następnie procesowi polonizacji. Od 1340 roku był częścią ziemi sanockiej, od 1434 znajdował się w województwie ruskim. W 1474 Frysztak został kompletnie zniszczony przez wojska króla węgierskiego Macieja Korwina. Z czasem Frysztak odbudował się po owych zniszczeniach, stając się silnym lokalnym ośrodkiem rzemieślniczym. Pod koniec XVIII w. Ewaryst Andrzej, hr. Kuropatnicki w swym "Opisaniu królestw Galicyi i Lodomeryi" podawał: Frysztak. Dziedziczne miasto domu Sierakowskich; obfite w rzemieślników, którzy terlice, kulbaki, siodła robią; i ganczarzów[8].
+                                Frysztak to także centrum lokalnego przemysłu, w tym m.in. przemysłu spożywczego i meblarskiego. Mieszkańcy wsi utrzymują się również z rolnictwa i usług.
 
-W połowie czerwca 1898 roku we Frysztaku, podobnie jak w całym powiecie jasielskim i strzyżowskim, miały miejsce rozruchy antyżydowskie[9]. 16 czerwca grupa chłopów, do których przyłączyli się ludzie wychodzący z kościoła, zaczęła rabować, niszczyć i plądrować karczmy, sklepy, stragany i domy żydowskie. Pozbawiona kierownictwa żandarmeria, nie mogąc opanować sytuacji, otworzyła ogień. Na miejscu śmierć poniosło sześć osób, drugie tyle zmarło w wyniku odniesionych ran. Do tragicznego finału rozruchów przyczyniła się postawa władz lokalnych (presja wywierana na żandarmów przez kierownika starostwa Jana Winiarskiego) i odmowa uspokojenia nastrojów wśród parafian przez księdza Franciszka Prusaka[10].
-
-W 1932 miejscowość utraciła prawa miejskie, mieszkańcy dwukrotnie – najpierw w 1952 r. i ponownie w 1975 r. – starali się o ich przywrócenie jednak bez powodzenia. Frysztak, pomimo formalnego braku praw miejskich, ma charakter małomiasteczkowy i stanowi lokalny ośrodek kulturalny i gospodarczy.
-
-Podczas okupacji hitlerowskiej, w styczniu roku Niemcy utworzyli getto dla żydowskich mieszkańców. Przebywało w nim około 1800 Żydów. 18 sierpnia 1942 roku getto zostało zlikwidowane, a Żydzi zostali zamordowani w lesie w Warzycach, w lesie w Krajowicach koło Jasła a większość została wywieziona do obozu zagłady Bełżcu i tam zamordowana[11].</p>
+                                Podsumowując, Frysztak to urokliwa wieś o bogatej historii, położone w atrakcyjnym regionie przyrodniczym. Jego mieszkańcy mogą cieszyć się zarówno urokami otaczającej natury, jak i możliwościami rozwoju zawodowego i społecznego w dynamicznym środowisku.
+                                </p>
+            
                             </div>
                         </div>
                     </div>

@@ -69,7 +69,7 @@ const HomePage = () => {
                         <div className="col-lg-8">
                             <div className="row">
                                 <div className="col-12">
-                                                                    </div>
+                                                           WWWWWWWWWW         </div>
                             </div>
                             {/*CAROUSEL START*/}
                             <div className="entertrainment_carousel mb30">
