@@ -2,15 +2,14 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import PrivateRoute from '../_PrivateRoute';
 import HomePage from "../HomePage";
-import BusinessPage from "../BusinessPage";
+import LocalPage from "../LocalPage";
 
 import AboutUsPage from "../AboutUsPage";
 import ArchivePage from "../ArchivePage";
 import ContactUsPage from "../ContactUsPage";
 import NotFoundPage from "../NotFoundPage";
 import PostOnePage from "../PostOnePage";
-import PostTwoPage from "../PostTwoPage";
-import PostThreePage from "../PostThreePage";
+
 
 
 // import PublicRoute from '../_PublicRoute';
@@ -25,9 +24,9 @@ export function Routes() {
                 component={HomePage} />
             <PrivateRoute
                 exact
-                path="/business"
+                path="/local"
                 parentClass="theme-1"
-                component={BusinessPage} />
+                component={LocalPage} />
                    
             <PrivateRoute
                 exact
@@ -54,16 +53,7 @@ export function Routes() {
                 path="/post1"
                 parentClass="theme-1"
                 component={PostOnePage} />
-            <PrivateRoute
-                exact
-                path="/post2"
-                parentClass="theme-1"
-                component={PostTwoPage} />
-            <PrivateRoute
-                exact
-                path="/post3"
-                parentClass="theme-1"
-                component={PostThreePage} />
+         
  
 
 

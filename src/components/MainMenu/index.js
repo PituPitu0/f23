@@ -30,7 +30,7 @@ const menus = [
         submenu: [
             {
                 id: 41,
-                link: '/business',
+                link: '/local',
                 linkText: 'Lokalne'
             },
            

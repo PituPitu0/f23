@@ -170,7 +170,9 @@ function PostOnePageStrapi() {
         <div key={article.id}>
           <div className="widget-title border-radious5 mb30 shadow7 padding20">
             <h1>
-              <a href={`/post1/${article.id}`}>{article.attributes.title}</a>
+              <a href={`/post1/`}>{article.attributes.title}</a>
+              {/* <a href={`/post1/${article.id}`}>{article.attributes.title}</a> */}
+              {/* ver oryginal ^^ */}
             </h1>
           </div>
         </div>

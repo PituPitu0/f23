@@ -30,7 +30,7 @@ const localNews = [
         image: business2,
         category: 'uiux.subash',
         date: 'March 26, 2020',
-        title: 'Copa America: Luis Suarez from devastated US',
+        title: 'Copa America: Luis kuku Suarez from devastated US',
         body: 'The property, complete with 30-seat screening from room, a 100-seat amphitheater and a swimming pond with…'
     },
     {
@@ -69,7 +69,7 @@ const HomePage = () => {
                         <div className="col-lg-8">
                             <div className="row">
                                 <div className="col-12">
-                                                           WWWWWWWWWW         </div>
+                                                               </div>
                             </div>
                             {/*CAROUSEL START*/}
                             <div className="entertrainment_carousel mb30">
