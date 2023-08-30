@@ -10,7 +10,15 @@ import BannerSection from "../../components/BannerSection";
 
 import aboutus from '../../doc/img/aboutus/aboutus.jpg'
 
-
+const myWork = [];
+for (let x = 1; x < 10; x++) {
+   
+    let temp = {
+        name: `Lekcja ${x}`
+    };
+    myWork.push(temp);
+}
+console.log(myWork);
 
 const AboutUsPage = () => {
     const [activeTab, setActiveTab] = useState('1');
@@ -32,7 +40,7 @@ const AboutUsPage = () => {
                                         <img src={aboutus} alt="aboutus"/>
                                     </div>
                                 </div>
-                               
+ 
                                 <h1>Historia</h1>
                                 <br/>
                                 <p>
