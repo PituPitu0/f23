@@ -1,163 +1,66 @@
-// import React, {Fragment} from 'react';
-// import BreadCrumb from "../../components/BreadCrumb";
-// import LocalNews from "../../components/LocalNews";
-// import FontAwesome from "../../components/uiStyle/FontAwesome";
-// import {Link} from "react-router-dom";
-
-
-// // images
-// import business1 from '../../doc/img/business/business1.jpg';
-// import business2 from '../../doc/img/business/business2.jpg';
-// import business3 from '../../doc/img/business/business3.jpg';
-
-// import BannerSection from "../../components/BannerSection";
-
-// const localNews = [
-//     {
-//         image: business1,
-//         category: 'uiux.subash',
-//         date: 'March 26, 2020',
-//         title: 'Copa America: Luis Suarez from devastated US',
-//         body: 'The property, complete with 30-seat screening from room, a 100-seat amphitheater and a swimming pond with…'
-//     },
-//     {
-//         image: business2,
-//         category: 'uiux.subash',
-//         date: 'March 26, 2020',
-//         title: 'Copa America: Luis Suarez from devastated US',
-//         body: 'The property, complete with 30-seat screening from room, a 100-seat amphitheater and a swimming pond with…'
-//     },
-//     {
-//         image: business3,
-//         category: 'uiux.subash',
-//         date: 'March 26, 2020',
-//         title: 'Copa America: Luis Suarez from devastated US',
-//         body: 'The property, complete with 30-seat screening from room, a 100-seat amphitheater and a swimming pond with…'
-//     },
-   
-// ];
-// const BusinessPage = () => {
-//     return (
-//         <Fragment>
-//             <BreadCrumb title="Lokalne"/>
-//             <div className="archives padding-top-30">
-//                 <div className="container">
-//                     <div className="row">
-//                         <div className="col-md-6 col-lg-8">
-//                             <div className="businerss_news">
-//                                 <div className="row">
-//                                     <div className="col-12 align-self-center">
-//                                         <div className="categories_title">
-//                                             <h5>Kategoria: <Link to="/">Lokalne</Link></h5>
-//                                         </div>
-//                                     </div>
-//                                 </div>
-//                                 <div className="row">
-//                                     <div className="col-12">
-//                                         <LocalNews headerHide={true} localNews={localNews}/>
-//                                     </div>
-//                                 </div>
-//                                 <div className="row">
-//                                     <div className="col-12">
-//                                         <div className="cpagination">
-//                                             <nav aria-label="Page navigation example">
-//                                                 <ul className="pagination">
-//                                                     <li className="page-item">
-//                                                         <Link className="page-link" to="/" aria-label="Previous">
-//                                                                 <span aria-hidden="true"><FontAwesome
-//                                                                     name="caret-left"/></span>
-//                                                         </Link>
-//                                                     </li>
-//                                                     <li className="page-item">
-//                                                         <Link className="page-link" to="/">1</Link>
-//                                                     </li>
-//                                                     <li className="page-item">
-//                                                         <Link className="page-link" to="/">..</Link>
-//                                                     </li>
-//                                                     <li className="page-item">
-//                                                         <Link className="page-link" to="/">5</Link>
-//                                                     </li>
-//                                                     <li className="page-item">
-//                                                         <Link className="page-link" to="/" aria-label="Next">
-//                                                                 <span aria-hidden="true"><FontAwesome
-//                                                                     name="caret-right"/></span>
-//                                                         </Link>
-//                                                     </li>
-//                                                 </ul>
-//                                             </nav>
-//                                         </div>
-//                                     </div>
-//                                 </div>
-//                             </div>
-//                         </div>
-                      
-//                     </div>
-//                 </div>
-//             </div>
-//             <div className="space-70"/>
-//             <BannerSection/>
-//         </Fragment>
-//     );
-// };
-
-// export default BusinessPage;
-
 import React, { Fragment, useState, useEffect } from 'react';
 import BreadCrumb from "../../components/BreadCrumb";
 import LocalNews from "../../components/LocalNews";
-
 import { Link } from "react-router-dom";
-import axios from 'axios'; // Dodaliśmy import Axios
-
+import axios from 'axios';
 import BannerSection from "../../components/BannerSection";
 
 const LocalPage = () => {
-    const [localNews, setLocalNews] = useState([]); // Stan dla wiadomości lokalnych
+  const [localNews, setLocalNews] = useState([]);
+  const [currentPage, setCurrentPage] = useState(0); // Domyślna strona to 0
 
-    useEffect(() => {
-        fetchLocalNews(); // Pobranie danych przy załadowaniu komponentu
-    }, []);
+  useEffect(() => {
+    fetchLocalNews();
+  }, []);
 
-    const fetchLocalNews = async () => {
-        try {
-            const response = await axios.get('http://localhost:1337/api/newss?_limit=3&_sort=createdAt:desc');
-            console.log('Odpowiedź z serwera:', response.data.data);
-            setLocalNews(response.data.data);
-        } catch (error) {
-            console.log('Wystąpił błąd:', error);
-        }
-    };
+  const fetchLocalNews = async () => {
+    try {
+      const response = await axios.get('http://localhost:1337/api/newss');
+      setLocalNews(response.data.data);
+    } catch (error) {
+      console.log('Wystąpił błąd:', error);
+    }
+  };
 
-    return (
-        <Fragment>
-            <BreadCrumb title="Lokalne"/>
-            <div className="archives padding-top-30">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-6 col-lg-8">
-                            <div className="businerss_news">
-                                <div className="row">
-                                    <div className="col-12 align-self-center">
-                                        <div className="categories_title">
-                                            <h5>Kategoria: <Link to="/">Lokalne</Link></h5>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="row">
-                                    <div className="col-12">
-                                        <LocalNews headerHide={true} localNews={localNews}/>
-                                    </div>
-                                </div>
-                                {/* Pozostała część komponentu */}
-                            </div>
-                        </div>
+  const handlePageChange = (selectedPage) => {
+    setCurrentPage(selectedPage.selected);
+  };
+
+  return (
+    <Fragment>
+      <BreadCrumb title="Lokalne"/>
+      <div className="archives padding-top-30">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6 col-lg-8">
+              <div className="businerss_news">
+                <div className="row">
+                  <div className="col-12 align-self-center">
+                    <div className="categories_title">
+                      <h5>Kategoria: <Link to="/">Lokalne</Link></h5>
                     </div>
+                  </div>
                 </div>
+                <div className="row">
+                  <div className="col-12">
+                    <LocalNews
+                      headerHide={true}
+                      localNews={localNews}
+                      currentPage={currentPage}
+                      onPageChange={handlePageChange}
+                    />
+                  </div>
+                </div>
+                {/* Pozostała część komponentu */}
+              </div>
             </div>
-            <div className="space-70"/>
-            <BannerSection/>
-        </Fragment>
-    );
+          </div>
+        </div>
+      </div>
+      <div className="space-70"/>
+      <BannerSection/>
+    </Fragment>
+  );
 };
 
 export default LocalPage;

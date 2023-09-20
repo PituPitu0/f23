@@ -9,6 +9,8 @@ import ArchivePage from "../ArchivePage";
 import ContactUsPage from "../ContactUsPage";
 import NotFoundPage from "../NotFoundPage";
 import PostOnePage from "../PostOnePage";
+import LocalNews from '../../components/LocalNews'; 
+import SingleArticlePage from '../../components/SingleArticlePage';
 
 
 
@@ -53,7 +55,13 @@ export function Routes() {
                 path="/post1"
                 parentClass="theme-1"
                 component={PostOnePage} />
-         
+            <Route 
+                exact 
+                path="/local" 
+                component={LocalNews} />
+            <Route
+                path="/local/:id"  
+                component={SingleArticlePage} />
  
 
 
