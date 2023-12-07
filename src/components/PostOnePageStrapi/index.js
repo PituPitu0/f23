@@ -11,7 +11,7 @@ function PostOnePageStrapi({ articleId }) { // Dodaj articleId jako prop
 
   const fetchArticles = async () => {
     try {
-      const response = await axios.get('http://localhost:1337/api/newss?populate=*');
+      const response = await axios.get('strapi-dt37.onrender.com/api/newss?populate=*');
       console.log('Odpowiedź z serwera:', response.data);
       setArticles(response.data.data);
     } catch (error) {
@@ -34,7 +34,7 @@ function PostOnePageStrapi({ articleId }) { // Dodaj articleId jako prop
           </div>
           
           <div className="border-radious5 mb30 shadow7 padding20">
-            <img src={`http://localhost:1337${article.attributes.image.data.attributes.url}`} alt={article.attributes.title} />
+            <img src={`http://strapi-dt37.onrender.com${article.attributes.image.data.attributes.url}`} alt={article.attributes.title} />
           </div>
         </div>
       ))}
