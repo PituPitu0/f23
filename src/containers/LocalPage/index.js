@@ -48,6 +48,7 @@ const LocalPage = () => {
                       localNews={localNews}
                       currentPage={currentPage}
                       onPageChange={handlePageChange}
+                      articleId={true} // Przekaż prop articleId jako true
                     />
                   </div>
                 </div>

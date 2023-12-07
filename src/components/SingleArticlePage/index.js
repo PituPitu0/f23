@@ -1,24 +1,41 @@
-import React  from 'react';
-import { useParams } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
-const SingleArticlePage = ({ localNews }) => {
-  const { id } = useParams();
-  const articleId = parseInt(id, 10); // Parsuj ID do liczby całkowitej
+const SingleArticlePage = ({ match }) => {
+  const [article, setArticle] = useState(null);
+  const articleId = match.params.id;
 
-  const article = localNews[articleId - 1]; // Pobierz artykuł na podstawie ID
+  useEffect(() => {
+    const fetchArticle = async () => {
+      try {
+        const response = await axios.get(`http://localhost:1337/api/news/${articleId}?populate=*`);
+        console.log('Odpowiedź z serwera:', response.data);
+        setArticle(response.data);
+      } catch (error) {
+        console.log('Wystąpił błąd:', error);
+      }
+    };
+
+    fetchArticle();
+  }, [articleId]);
 
   if (!article) {
-    return <div>Nie znaleziono artykułu</div>;
+    return <div>Ładowanie...</div>;
   }
 
   return (
     <div>
-      <h1>{article.attributes.title}</h1>
-      <img
-        src={`http://localhost:1337${article.attributes.image.data.attributes.url}`}
-        alt={article.attributes.title}
-      />
-      <p>{article.attributes.content}</p>
+      <div className="widget-title border-radious5 mb30 shadow7 padding20">
+        <h1>{article.attributes.title}</h1>
+      </div>
+      
+      <div className="border-radious5 mb30 shadow7 padding20">
+        <div>{article.attributes.article}</div>
+      </div>
+      
+      <div className="border-radious5 mb30 shadow7 padding20">
+        <img src={`http://localhost:1337${article.attributes.image.data.attributes.url}`} alt={article.attributes.title} />
+      </div>
     </div>
   );
 };

@@ -10,7 +10,7 @@ import ContactUsPage from "../ContactUsPage";
 import NotFoundPage from "../NotFoundPage";
 import PostOnePage from "../PostOnePage";
 import LocalNews from '../../components/LocalNews'; 
-import SingleArticlePage from '../../components/SingleArticlePage';
+//import SingleArticlePage from '../../components/SingleArticlePage';
 
 
 
@@ -59,9 +59,7 @@ export function Routes() {
                 exact 
                 path="/local" 
                 component={LocalNews} />
-            <Route
-                path="/local/:id"  
-                component={SingleArticlePage} />
+           
  
 
 
