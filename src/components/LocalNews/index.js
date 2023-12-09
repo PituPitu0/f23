@@ -16,7 +16,7 @@ const LocalNews = ({ localNews, currentPage, onPageChange }) => {
           </h2>
           {article.attributes.image && (
             <img
-              src={`http://localhost:1337${article.attributes.image.url}`}
+              src={`http://strapi-dt37.onrender.com${article.attributes.image.url}`}
               alt={article.attributes.title}
             />
           )}
