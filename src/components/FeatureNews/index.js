@@ -156,7 +156,7 @@ function PostOnePageStrapi() {
 
   const fetchArticles = async () => {
     try {
-      const response = await axios.get('http://localhost:1337/api/newss?_sort=createdAt:desc');
+      const response = await axios.get('https://strapi-dt37.onrender.com/api/newss?_sort=createdAt:desc');
       console.log('Odpowiedź z serwera:', response.data.data);
       setArticles(response.data.data);
     } catch (error) {
