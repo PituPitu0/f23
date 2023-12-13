@@ -8,7 +8,7 @@ const SingleArticlePage = ({ match }) => {
   useEffect(() => {
     const fetchArticle = async () => {
       try {
-        const response = await axios.get(`http://strapi-dt37.onrender.com/api/news/${articleId}?populate=*`);
+        const response = await axios.get(`https://strapi-dt37.onrender.com/api/news/${articleId}?populate=*`);
         console.log('Odpowiedź z serwera:', response.data);
         setArticle(response.data);
       } catch (error) {
@@ -34,7 +34,7 @@ const SingleArticlePage = ({ match }) => {
       </div>
       
       <div className="border-radious5 mb30 shadow7 padding20">
-        <img src={`http://strapi-dt37.onrender.com${article.attributes.image.data.attributes.url}`} alt={article.attributes.title} />
+        <img src={`https://strapi-dt37.onrender.com${article.attributes.image.data.attributes.url}`} alt={article.attributes.title} />
       </div>
     </div>
   );

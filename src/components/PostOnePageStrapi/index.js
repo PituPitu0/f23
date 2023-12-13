@@ -34,7 +34,7 @@ function PostOnePageStrapi({ articleId }) { // Dodaj articleId jako prop
           </div>
           
           <div className="border-radious5 mb30 shadow7 padding20">
-            <img src={`http://strapi-dt37.onrender.com${article.attributes.image.data.attributes.url}`} alt={article.attributes.title} />
+            <img src={`https://strapi-dt37.onrender.com${article.attributes.image.data.attributes.url}`} alt={article.attributes.title} />
           </div>
         </div>
       ))}
