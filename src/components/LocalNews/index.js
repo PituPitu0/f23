@@ -7,6 +7,10 @@ const LocalNews = ({ localNews, currentPage, onPageChange }) => {
   const offset = currentPage * articlesPerPage;
   const displayedNews = localNews.slice(offset, offset + articlesPerPage);
 
+  const truncateText = (text, maxLength) => {
+    return text.length > maxLength ? `${text.substring(0, maxLength)}...` : text;
+  };
+
   return (
     <div>
       {displayedNews.map((article) => (
@@ -14,23 +18,29 @@ const LocalNews = ({ localNews, currentPage, onPageChange }) => {
           <h2>
             <Link to={`/article/${article.id}`}>{article.attributes.title}</Link>
           </h2>
+          <div>
+            {/* Wyświetl tylko 30 znaków z całego artykułu */}
+            <p>{truncateText(article.attributes.article[0].children[0].text, 30)}</p>
+          </div>
+          <Link to={`/article/${article.id}`}>...czytaj dalej</Link>
+          {/* Użycie danych o obrazie */}
           {article.attributes.image && (
             <img
               src={`https://strapi-dt37.onrender.com${article.attributes.image.url}`}
-              alt={article.attributes.title}
+              alt={article.attributes.image.name}
             />
           )}
         </div>
       ))}
       <ReactPaginate
-        previousLabel={'Poprzednia'}
-        nextLabel={'Następna'}
+        previousLabel={'<<'}
+        nextLabel={'>>'}
         breakLabel={'...'}
         pageCount={Math.ceil(localNews.length / articlesPerPage)}
         marginPagesDisplayed={2}
         pageRangeDisplayed={5}
         onPageChange={onPageChange}
-        containerClassName={'pagination'}
+        containerClassName={'cpagination Page navigation example pagination'}
         activeClassName={'active'}
       />
     </div>
