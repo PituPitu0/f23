@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import axios from 'axios';
 import BannerSection from "../../components/BannerSection";
 
+
 const LocalPage = () => {
   const [localNews, setLocalNews] = useState([]);
   const [currentPage, setCurrentPage] = useState(0); // Domyślna strona to 0
@@ -33,7 +34,7 @@ const LocalPage = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-6 col-lg-8">
-              <div className="businerss_news">
+              <div className="business_news">
                 <div className="row">
                   <div className="col-12 align-self-center">
                     <div className="categories_title">
@@ -43,6 +44,15 @@ const LocalPage = () => {
                 </div>
                 <div className="row">
                   <div className="col-12">
+                  <div className="cpagination">
+                                <nav aria-label="Page navigation example">
+                                    <ul className="pagination">
+                                        <li className="page-item">
+                       
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
                     <LocalNews
                       headerHide={true}
                       localNews={localNews}
@@ -65,3 +75,5 @@ const LocalPage = () => {
 };
 
 export default LocalPage;
+
+
