@@ -3,12 +3,12 @@ import { Route, Switch } from 'react-router-dom';
 import PrivateRoute from '../_PrivateRoute';
 import HomePage from "../HomePage";
 import LocalPage from "../LocalPage";
-
+import PostOnePage from "../PostOnePage";
 import AboutUsPage from "../AboutUsPage";
 import ArchivePage from "../ArchivePage";
 import ContactUsPage from "../ContactUsPage";
 import NotFoundPage from "../NotFoundPage";
-import PostOnePageStrapi from "../PostOnePageStrapi";
+//import PostOnePageStrapi from "../PostOnePageStrapi";
 import LocalNews from '../../components/LocalNews';
 //import SingleArticlePage from '../../components/SingleArticlePage';
 
@@ -35,6 +35,11 @@ export function Routes() {
                 path="/about"
                 parentClass="theme-1"
                 component={AboutUsPage} />
+             <PrivateRoute
+                exact
+                path="/post1"
+                parentClass="theme-1"
+                component={PostOnePage} />    
             <PrivateRoute
                 exact
                 path="/archive"
@@ -54,10 +59,7 @@ export function Routes() {
                 exact 
                 path="/local" 
                 component={LocalNews} />
-            <PrivateRoute 
-                exact
-                path="/article/:id" 
-                component={PostOnePageStrapi} />
+           
            
  
 

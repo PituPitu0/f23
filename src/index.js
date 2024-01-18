@@ -12,9 +12,9 @@ import './doc/scss/master.scss';
 import 'font-awesome/css/font-awesome.min.css';
 import 'swiper/css'
 import 'react-modal-video/scss/modal-video.scss';
-// import Strapi from "strapi-sdk-js";
+//import Strapi from "strapi-sdk-js";
 
-// const strapi = new Strapi();
+//const strapi = new Strapi('https://strapi-dt37.onrender.com');
 
 ReactDOM.render(
     <Provider store={store}>

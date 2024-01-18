@@ -16,7 +16,7 @@ const LocalPage = () => {
 
   const fetchLocalNews = async () => {
     try {
-      const response = await axios.get('https://strapi-dt37.onrender.com/api/newss');
+      const response = await axios.get('https://strapi-dt37.onrender.com/api/newss?populate=*');
       setLocalNews(response.data.data);
     } catch (error) {
       console.log('Wystąpił błąd:', error);

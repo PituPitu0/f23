@@ -47,25 +47,26 @@ const LocalNews = ({ localNews, currentPage, onPageChange }) => {
         <div className="single_post post_type3 post_type12 mb30">
           {displayedNews.map((article) => (
             <div key={article.id}>
-              <div className="post_img">
-                <div className="img_wrap">
+              <div className="card-img">
+                <div className="">
                   <Link to={`/article/${article.id}`}>
                     {/* Użycie danych o obrazie, sprawdzenie, czy artykuł ma obraz */}
                     {article.attributes.image && (
                       <img
-                        src={`https://strapi-dt37.onrender.com${article.attributes.image.url}`}
+                        src={`https://strapi-dt37.onrender.com${article.attributes.image.data.attributes.formats.small.url}`}
                         alt={article.attributes.image.name}
                       />
+                  
                     )}
                   </Link>
                 </div>
               </div>
-
+              <div className="space-20" />
               <div className="single_post_text">
                 <h4>
                   <Link to={`/article/${article.id}`}>{article.attributes.title}</Link>
                 </h4>
-                <div className="space-10" />
+                <div className="space-20" />
                 <div>
                   {/* Wyświetl tylko 30 znaków z całego artykułu */}
                   <p className="post-p">
@@ -74,6 +75,7 @@ const LocalNews = ({ localNews, currentPage, onPageChange }) => {
                 </div>
                 <div className="space-20" />
                 <div>
+          
                   <Link className="readmore" to={`/article/${article.id}`}>
                     czytaj dalej
                   </Link>
