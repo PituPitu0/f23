@@ -31,7 +31,7 @@ function PostOnePage() {
           <div className="row">
             <div className="col-md-6 col-lg-8">
               <div className="space-20" />
-              <PostOnePageStrapi/> {/* Przekazanie articleId */}
+              <PostOnePageStrapi/> 
               <div className="space-40" />
 
             </div>

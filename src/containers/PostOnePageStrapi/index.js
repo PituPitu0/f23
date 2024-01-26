@@ -63,7 +63,7 @@ function PostOnePageStrapi() {
   return (
     <div className="container">
       {articles.map((article) => (
-        <div className="container">
+        
             
         <div key={article.id}>
           <div className="widget-title border-radious5 mb30 shadow7 padding20">
@@ -78,7 +78,7 @@ function PostOnePageStrapi() {
             <img src={`https://strapi-dt37.onrender.com${article.attributes.image.data.attributes.url}`} alt="krowa" />
           </div>
            </div>
-        </div>
+        
       ))}
 
 
