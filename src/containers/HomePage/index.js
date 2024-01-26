@@ -45,7 +45,7 @@ const localNews = [
 const HomePage = () => {
     return (
       
-      
+        <div className="container">
         <Fragment>
             {/*<PostCarousel className="fifth_bg"/>*/}
             {/*<PostGallery className="fifth_bg"/>*/}
@@ -112,6 +112,7 @@ const HomePage = () => {
             </div>
             <div className="space-70"/>
         </Fragment>
+        </div>
     );
 };
 

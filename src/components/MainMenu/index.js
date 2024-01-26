@@ -71,7 +71,7 @@ const menusDark = [
 
 const MainMenu = ({className, dark}) => {
     const [searchShow, setSearchShow] = useState(false);
-    const [setSideShow] = useState(false);
+   // const [setSideShow] = useState(false);
 
     const arr = dark ? menusDark : menus;
     return (
@@ -85,9 +85,11 @@ const MainMenu = ({className, dark}) => {
                         <div className="row justify-content-between">
                             <nav className="navbar navbar-expand-lg col-lg-8 align-self-center">
                                 <div className="site-nav-inner">
-                                    <button className="navbar-toggler" onClick={() => setSideShow(true)}>
+                                 <button className="navbar-toggler">
+                                    <Link to="/local">
                                         <FontAwesome name="bars"/>
-                                    </button>
+                                    </Link>
+                                 </button>
                                     <div id="navbarSupportedContent"
                                          className="collapse navbar-collapse navbar-responsive-collapse">
                                         <ul className="nav navbar-nav" id="scroll">

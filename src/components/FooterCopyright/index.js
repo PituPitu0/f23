@@ -4,13 +4,13 @@ import {Link} from "react-router-dom";
 const quick_links = [
     {
         name: 'O Nas',
-        link: 'about/'
+        link: 'about'
     },
  
  
     {
         name: 'Kontakt',
-        link: 'contact/'
+        link: 'contact'
     },
 ];
 
