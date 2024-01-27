@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React  from 'react';
 import { Link } from 'react-router-dom';
 import ReactPaginate from 'react-paginate';
 
@@ -11,35 +11,6 @@ const LocalNews = ({ localNews, currentPage, onPageChange }) => {
     return text.length > maxLength ? `${text.substring(0, maxLength)}...` : text;
   };
 
-  useEffect(() => {
-    // Funkcja do wypisania struktury danych z API
-    const logApiDataStructure = async () => {
-      if (localNews.length > 0) {
-        const firstArticle = localNews[0];
-        const populateParam = 'article'; // Zmiana parametru 'populate' na odpowiedni dla Twojej struktury API
-
-        // Sprawdź, czy artykuł ma obraz i pobierz pełne dane obrazu
-        const fullImageData = firstArticle.attributes.image
-          ? await fetchFullImage(firstArticle.attributes.image.data.id)
-          : null;
-
-        // Sprawdź, czy masz dostęp do całego API
-        const response = await fetch(`https://strapi-dt37.onrender.com/api/newss/${firstArticle.id}?populate=${populateParam}`);
-        const data = await response.json();
-
-        console.log('Struktura danych z API:', data);
-        console.log('Pełne dane obrazu:', fullImageData);
-      }
-    };
-
-    logApiDataStructure();
-  }, [localNews]);
-
-  const fetchFullImage = async (imageId) => {
-    const response = await fetch(`https://strapi-dt37.onrender.com/api/images/${imageId}`);
-    const data = await response.json();
-    return data;
-  };
 
   return (
     <div className="row">
@@ -49,7 +20,7 @@ const LocalNews = ({ localNews, currentPage, onPageChange }) => {
             <div key={article.id}>
               <div className="card-img">
                 <div className="">
-                  <Link to={`/article/${article.id}`}>
+                  <Link to={`/post${article.id}/`}>
                     {/* Użycie danych o obrazie, sprawdzenie, czy artykuł ma obraz */}
                     {article.attributes.image && (
                       <img
@@ -64,7 +35,7 @@ const LocalNews = ({ localNews, currentPage, onPageChange }) => {
               <div className="space-20" />
               <div className="single_post_text">
                 <h4>
-                  <Link to={`/post/${article.id}`}>{article.attributes.title}</Link>
+                  <Link to={`/post${article.id}/`}>{article.attributes.title}</Link>
                 </h4>
                 <div className="space-20" />
                 <div>
@@ -76,7 +47,7 @@ const LocalNews = ({ localNews, currentPage, onPageChange }) => {
                 <div className="space-20" />
                 <div>
           
-                  <Link className="readmore" to={`/post/${article.id}`}>
+                  <Link className="readmore" to={`/post${article.id}/`}>
                     czytaj dalej
                   </Link>
                 </div>

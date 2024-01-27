@@ -1,24 +1,7 @@
 import React, { Fragment } from 'react';
 
-import PostOnePageStrapi  from "../PostOnePageStrapi";
-import axios from "axios";
+import PostOneMainStrapi  from "../PostOnePageStrapi";
 
-axios.get("https://strapi-dt37.onrender.com/api/newss?populate=*").then((response) => {
-  console.log(response);
-});
-
-
-
-console.log("test");
-
-fetch("https://strapi-dt37.onrender.com/api/newss?populate=*", {
-  method: "GET",
-  headers: {
-    "Content-Type": "application/json",
-  },
-})
-  .then((response) => response.json())
-  .then((data) => console.log(data));
 
 function PostOnePage() {
 //  const { id } = useParams();
@@ -31,7 +14,7 @@ function PostOnePage() {
           <div className="row">
             <div className="col-md-6 col-lg-8">
               <div className="space-20" />
-              <PostOnePageStrapi/> 
+              <PostOneMainStrapi/> 
               <div className="space-40" />
 
             </div>
