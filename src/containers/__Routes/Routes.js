@@ -8,8 +8,7 @@ import AboutUsPage from "../AboutUsPage";
 import ArchivePage from "../ArchivePage";
 import ContactUsPage from "../ContactUsPage";
 import NotFoundPage from "../NotFoundPage";
-//import PostOnePageStrapi from "../PostOnePageStrapi";
-import LocalNews from '../../components/LocalNews';
+//import LocalNews from '../../components/LocalNews';
 import PostOnePageStrapi from '../PostOnePageStrapi';
 //import SingleArticlePage from '../../components/SingleArticlePage';
 
@@ -57,11 +56,7 @@ export function Routes() {
                 path="/404"
                 parentClass="theme-1"
                 component={NotFoundPage} />
-            <PrivateRoute
-                exact 
-                path="/local" 
-                parentClass="theme-1"
-                component={LocalNews} />
+           
            
            
  

@@ -20,7 +20,7 @@ const LocalNews = ({ localNews, currentPage, onPageChange }) => {
             <div key={article.id}>
               <div className="card-img">
                 <div className="">
-                  <Link to={`/post${article.id}/`}>
+                  <Link to={`/post${article.id}`}>
                     {/* Użycie danych o obrazie, sprawdzenie, czy artykuł ma obraz */}
                     {article.attributes.image && (
                       <img
@@ -35,7 +35,7 @@ const LocalNews = ({ localNews, currentPage, onPageChange }) => {
               <div className="space-20" />
               <div className="single_post_text">
                 <h4>
-                  <Link to={`/post${article.id}/`}>{article.attributes.title}</Link>
+                  <Link to={`/post${article.id}`}>{article.attributes.title}</Link>
                 </h4>
                 <div className="space-20" />
                 <div>
@@ -47,7 +47,7 @@ const LocalNews = ({ localNews, currentPage, onPageChange }) => {
                 <div className="space-20" />
                 <div>
           
-                  <Link className="readmore" to={`/post${article.id}/`}>
+                  <Link className="readmore" to={`/post${article.id}`}>
                     czytaj dalej
                   </Link>
                 </div>
