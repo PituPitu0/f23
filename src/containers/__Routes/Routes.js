@@ -36,11 +36,12 @@ export function Routes() {
                 path="/about"
                 parentClass="theme-1"
                 component={AboutUsPage} />
-             <PrivateRoute
-                exact
-                path="/post1"
-                parentClass="theme-1"
-                component={PostOnePageStrapi} />    
+           <PrivateRoute
+                  exact
+                  path="/post:id" 
+                  parentClass="theme-1"
+                  component={PostOnePageStrapi} />
+ 
             <PrivateRoute
                 exact
                 path="/archive"
