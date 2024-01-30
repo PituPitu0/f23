@@ -26,3 +26,20 @@
 // }
 
 // export default PostOnePage;
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import PostOnePageStrapi from '../PostOnePageStrapi';
+
+function PostPageStrapi() {
+  // Pobierz parametr id z adresu URL
+  const { id } = useParams();
+
+  return (
+    <div>
+      {/* Wyświetl komponent PostOnePageStrapi i przekaż id jako parametr */}
+      <PostOnePageStrapi articleId={id} />
+    </div>
+  );
+}
+
+export default PostPageStrapi;
