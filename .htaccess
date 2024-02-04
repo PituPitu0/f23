@@ -1,6 +1,3 @@
-Options -Indexes +ExecCGI
-AddHandler cgi-script .cgi .pl
-
 RewriteEngine On
 RewriteBase /public_html/
 
