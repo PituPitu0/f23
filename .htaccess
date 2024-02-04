@@ -1,2 +1,10 @@
 Options -Indexes +ExecCGI
 AddHandler cgi-script .cgi .pl
+
+RewriteEngine On
+RewriteBase /public_html/
+
+# Przekierowanie wszystkich żądań na index.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]
