@@ -1972,10 +1972,8 @@ textarea {
 
 
 .primay_bg {
-  background: url(../img/bg/bannerf23.jpg);   //$primary_bg;(change to asphalt
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}    
+  background: $primary_bg;
+}
 
 
 .border_white {

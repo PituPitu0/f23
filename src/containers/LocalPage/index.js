@@ -68,7 +68,7 @@ const LocalPage = () => {
           </div>
         </div>
       </div>
-      <div className="space-70"/>
+    
       <BannerSection/>
     </Fragment>
   );

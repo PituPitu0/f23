@@ -19,7 +19,7 @@ const LocalNews = ({ localNews, currentPage, onPageChange }) => {
           {displayedNews.map((article) => (
             <div key={article.id}>
               <div className="card-img">
-              <div className="space-20" />
+              
                 <div className="img_wrap">
                   <Link to={`/post${article.id}`}>
                     {/* Użycie danych o obrazie, sprawdzenie, czy artykuł ma obraz */}

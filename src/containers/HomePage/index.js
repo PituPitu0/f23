@@ -71,7 +71,7 @@ const HomePage = () => {
           </div>
         </Fragment>
       </div>
-      <div className="space-70"/>
+      
       <BannerSection/>
     </Fragment>
   );
