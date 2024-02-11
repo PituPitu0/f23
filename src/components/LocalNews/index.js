@@ -42,7 +42,7 @@ const LocalNews = ({ localNews, currentPage, onPageChange }) => {
                 <div>
                   {/* Wyświetl tylko 30 znaków z całego artykułu */}
                   <p className="post-p">
-                    {truncateText(article.attributes.article2, 100)}
+                    {truncateText(article.attributes.article, 100)}
                   </p>
                 </div>
                 <div className="space-20" />

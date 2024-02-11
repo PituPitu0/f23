@@ -72,7 +72,7 @@ function PostOnePageStrapi({ articleId }) {
         </div>
 
         <div className="border-radious5 mb30 shadow7 padding20">
-          {article.attributes.article2}
+          {article.attributes.article}
         </div>
 
         <div className="border-radious5 mb30 shadow7 padding20">
