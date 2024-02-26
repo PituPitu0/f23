@@ -12,7 +12,10 @@ function FeatureNews() {
   const fetchArticles = async () => {
     try {
       const response = await axios.get('https://strapi-dt37.onrender.com/api/newss?populate=*');
-      setArticles(response.data.data);
+      // Odwracanie kolejności tablicy przed przypisaniem do stanu, 
+      // aby uniknąć odwracania przy każdym renderowaniu
+      const reversedArticles = response.data.data.reverse();
+      setArticles(reversedArticles);
     } catch (error) {
       console.log('Wystąpił błąd:', error);
     }
@@ -24,7 +27,6 @@ function FeatureNews() {
         <div key={article.id}>
           <div className="widget-title border-radious5 mb30 shadow7 padding20">
             <h1>
-              {/* Zamiast <a href={`/post${article.id}`}> */}
               <Link to={`/post${article.id}`}>{article.attributes.title}</Link>
             </h1>
           </div>
