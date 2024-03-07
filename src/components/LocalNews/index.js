@@ -15,11 +15,13 @@ const LocalNews = ({ localNews, currentPage, onPageChange }) => {
   return (
     <div className="row">
       <div className="col-12">
-        <div className="single_post post_type3 mb30">
-          {displayedNews.map((article) => (
+        <div className="businerss_news">
+         <div className="row">
+          <div className="col-12">
+            <div className="single_post post_type3 post_type12 mb30">
+              {displayedNews.map((article) => (
             <div key={article.id}>
-              <div className="card-img">
-              
+              <div className="post_img">
                 <div className="img_wrap">
                   <Link to={`/post${article.id}`}>
                     {/* Użycie danych o obrazie, sprawdzenie, czy artykuł ma obraz */}
@@ -33,12 +35,13 @@ const LocalNews = ({ localNews, currentPage, onPageChange }) => {
                   </Link>
                 </div>
               </div>
-              <div className="space-20" />
+              
               <div className="single_post_text">
+              <div className="space-20" />
                 <h4>
                   <Link to={`/post${article.id}`}>{article.attributes.title}</Link>
                 </h4>
-                <div className="space-20" />
+               
                 <div>
                   {/* Wyświetl tylko 30 znaków z całego artykułu */}
                   <p className="post-p">
@@ -53,9 +56,17 @@ const LocalNews = ({ localNews, currentPage, onPageChange }) => {
                   </Link>
                 </div>
                 <div className="space-20" />
+                <div className="border_black" />
               </div>
+             
             </div>
+            
+            
+  
           ))}
+          </div>
+          </div>
+        </div>
         </div>
       </div>
       <ReactPaginate

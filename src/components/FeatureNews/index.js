@@ -11,6 +11,10 @@ function FeatureNews() {
     fetchArticles();
   }, []);
 
+  const truncateText = (text, maxLength) => {
+    return text.length > maxLength ? `${text.substring(0, maxLength)}...` : text;
+  };
+
   const fetchArticles = async () => {
     try {
       const response = await axios.get('https://strapi-dt37.onrender.com/api/newss?populate=*');
@@ -39,12 +43,16 @@ function FeatureNews() {
 
   return (
     <div>
+      
       {currentArticles.map((article) => (
         <div key={article.id}>
           <div className="widget-title border-radious5 mb30 shadow7 padding20">
             <h1>
               <Link to={`/post${article.id}`}>{article.attributes.title}</Link>
             </h1>
+            <p className="post-p">
+                    {truncateText(article.attributes.article, 100)}
+            </p>
         {/*  <div className="author_about author_wrap author_img" >
             <Link to={`/post${article.id}`}>
                     {/* Użycie danych o obrazie, sprawdzenie, czy artykuł ma obraz */}
@@ -58,6 +66,7 @@ function FeatureNews() {
                   </Link>
               </div> */}
           </div>
+  
         </div>
       ))}
       <nav>
