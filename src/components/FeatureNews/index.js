@@ -52,7 +52,9 @@ function FeatureNews() {
             </h1>
             <p className="post-p">
                     {truncateText(article.attributes.article, 100)}
+
             </p>
+           
         {/*  <div className="author_about author_wrap author_img" >
             <Link to={`/post${article.id}`}>
                     {/* Użycie danych o obrazie, sprawdzenie, czy artykuł ma obraz */}
