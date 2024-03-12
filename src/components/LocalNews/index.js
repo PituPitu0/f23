@@ -37,7 +37,7 @@ const LocalNews = ({ localNews, currentPage, onPageChange }) => {
               </div>
               
               <div className="single_post_text">
-              <div className="space-20" />
+              
                 <h4>
                   <Link to={`/post${article.id}`}>{article.attributes.title}</Link>
                 </h4>
@@ -57,6 +57,7 @@ const LocalNews = ({ localNews, currentPage, onPageChange }) => {
                 </div>
                 <div className="space-20" />
                 <div className="border_black" />
+                <div className="space-20" />
               </div>
              
             </div>
