@@ -8,6 +8,7 @@ import AboutUsPage from "../AboutUsPage";
 import ArchivePage from "../ArchivePage";
 import ContactUsPage from "../ContactUsPage";
 import NotFoundPage from "../NotFoundPage";
+import Classifieds from '../Classifieds';
 //import LocalNews from '../../components/LocalNews';
 //import PostOnePageStrapi from '../PostOnePageStrapi';
 //import SingleArticlePage from '../../components/SingleArticlePage';
@@ -41,6 +42,11 @@ export function Routes() {
                   path="/post:id" 
                   parentClass="theme-1"
                   component={PostPageStrapi} />
+            <PrivateRoute
+                exact
+                path="/ogłoszenia"
+                parentClass="theme-1"
+                component={Classifieds} />
  
             <PrivateRoute
                 exact

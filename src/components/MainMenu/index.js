@@ -38,6 +38,12 @@ const menus = [
         ]
     },
     {
+        id: 5,
+        linkText: 'Ogłoszenia',
+        link: '/ogłoszenia'
+
+    },
+    {
         id: 3,
         linkText: 'O nas',
         link: '/about'

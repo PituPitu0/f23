@@ -1,5 +1,5 @@
 import React from 'react';
-import bannerImg from '../../doc/img/bg/banner1.png';
+import bannerImg from '../../doc/img/bg/inner_bg.jpg';
 import {Link} from "react-router-dom";
 
 const BannerSection = ({className}) => {

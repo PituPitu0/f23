@@ -15,9 +15,9 @@ const VideoPost = ({className, dark}) => {
         <div className={`video_posts ${className ? className : ''}`}>
             <div className="container">
                 <div className="row">
-                    <div className="col-12">
-                        <div className="heading white">
-                            <h2 className="widget-title">Video News</h2>
+               <div className="col-12">
+                  <div className="heading white">
+                     <h2 className="widget-title">Video News</h2>
                         </div>
                     </div>
                 </div>

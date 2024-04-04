@@ -7,12 +7,12 @@ class ContactUsPage extends Component {
        
         return (
             <Fragment>
-                <div className="inner inner_bg inner_overlay">
-                    <div className="container">
+                <div className="col-12">
+                      <div className="container">
                         <div className="inner_wrap">
                             <div className="row">
                                 <div className="col-lg-6">
-                                    <div className="white h2">
+                                    <div className="h2">
                                         <h6>Kontakt</h6>
                                         <h1>Napisz do nas</h1>
                                         <h2>Frysztak23pl@gmail.com</h2>
@@ -21,6 +21,7 @@ class ContactUsPage extends Component {
                             </div>
                        </div>
                     </div>
+               
                 </div>
                        {/*contact form area*/}
                 <div className="contact_form padding-bottom">
