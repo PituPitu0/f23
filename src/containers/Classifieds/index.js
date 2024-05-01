@@ -8,7 +8,7 @@ import BannerSection from "../../components/BannerSection";
 const Classifieds = () => {
     // Stan do przechowywania danych z formularza
     const [formData, setFormData] = useState({
-        name: '',
+        firstname: '',
         phone: '',
         contents: ''
     });
@@ -22,7 +22,7 @@ const Classifieds = () => {
 
         try {
             // Wysyłamy dane z formularza do API Strapi
-            const res = await axios.post('http://localhost:1337/api/forms', formData);
+            const res = await axios.post('https://strapi-dt37.onrender.com/api/forms?populate=*', formData);
             console.log(res.data); // Wyświetlamy odpowiedź z API (możemy również obsłużyć ją w inny sposób)
 
             // Opcjonalnie: wyczyść formularz po wysłaniu
